@@ -1,0 +1,59 @@
+{
+    "codigoPedido": "1",
+    "dataPedido": "2022-03-05",
+    "nomePedido": "Ordem de Serviço 1",
+    "tipoPedido": "Ordem",
+    "dadosPessoa": [
+        {
+            "nome": "Nome 1",
+            "dataNascimento": "1993-10-21",
+            "endereco": [
+                {
+                    "descricao": "Casa",
+                    "lougradouro": "Avenida 1",
+                    "bairro": "centro",
+                    "cidade": "São Paulo",
+                    "cep": "11111000"
+                },
+                {
+                    "descricao": "Casa da mãe",
+                    "lougradouro": "Avenida 2",
+                    "bairro": "centro",
+                    "cidade": "São Paulo",
+                    "cep": "11111000"
+                }
+            ]
+        },
+        {
+            "nome": "Nome 2",
+            "dataNascimento": "1993-12-15",
+            "endereco": [
+                {
+                    "descricao": "Casa",
+                    "lougradouro": "Avenida 1",
+                    "bairro": "centro",
+                    "cidade": "São Paulo",
+                    "cep": "11111000"
+                },
+                {
+                    "descricao": "Casa da mãe",
+                    "lougradouro": "Avenida 2",
+                    "bairro": "centro",
+                    "cidade": "São Paulo",
+                    "cep": "11111000"
+                }
+            ]
+        }
+    ],
+    "itensPedido": [
+        {
+            "descricao": "Instalação do motor de arranque"
+        },
+        {
+            "descricao": "Instalação do amortecedor"
+        },
+        {
+            "descricao": "Troca da bomba de gasolina"
+        }
+    ]
+}
