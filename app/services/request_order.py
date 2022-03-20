@@ -19,6 +19,9 @@ def save(payload):
                                  headers=headers)
 
         response.raise_for_status()
+        
+        logging.info('Requisição enviada com sucesso.')
+        logging.info(response.json())
 
         return response
     except requests.exceptions.RequestException as e:
@@ -27,7 +30,7 @@ def save(payload):
             if response.status_code != (500):
                 raise Exception(response.json())
             else:
-                raise Exception("Erro ao enviar requisição para api.")
+                raise Exception(f'Erro ao enviar requisição para api.{e}')
 
         else:
-            raise Exception(f"Erro ao enviar requisição para api.{e.strerror}")
+            raise Exception(f'Erro ao enviar requisição para api.{e}')

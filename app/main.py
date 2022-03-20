@@ -4,7 +4,8 @@ from services import open_payload_order
 
 def main():
     payload = open_payload_order.open_payload()
-    request_order.save(payload)
+    response = request_order.save(payload)
+    print(response.json())
 
 
 if __name__ == "__main__":
