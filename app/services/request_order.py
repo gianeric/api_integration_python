@@ -12,21 +12,22 @@ def save(payload):
     response = None
 
     try:
+        headers = get_header()
         logging.info('Enviando requisição para api ...')
-        response = requests.post('http://localhost:8080/servico/v1/pedidos'
-                                ,json=payload
-                                ,headers=get_header())
-        
+        response = requests.post('http://localhost:8080/servico/v1/pedidos',
+                                 json=payload,
+                                 headers=headers)
+
         response.raise_for_status()
 
         return response
     except requests.exceptions.RequestException as e:
-        if response != None:
+        if response is not None:
 
             if response.status_code != (500):
-                raise Exception (response.json())
+                raise Exception(response.json())
             else:
-                raise Exception ("Erro ao enviar requisição para api.")
+                raise Exception("Erro ao enviar requisição para api.")
 
         else:
-            raise Exception ("Erro ao enviar requisição para api.")
+            raise Exception(f"Erro ao enviar requisição para api.{e.strerror}")

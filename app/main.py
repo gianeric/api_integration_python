@@ -1,15 +1,11 @@
 from services import request_order
-import json
+from services import open_payload_order
 
 
 def main():
-    with open('assets/order.json', encoding='utf-8') as file:
-        payload = json.load(file)
-    
-    print(type(payload))
-
+    payload = open_payload_order.open_payload()
     request_order.save(payload)
 
 
-if __name__== "__main__":
-  main()
+if __name__ == "__main__":
+    main()
