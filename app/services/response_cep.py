@@ -1,3 +1,4 @@
+from services import get_secret_manager
 import requests
 import logging
 
@@ -10,16 +11,23 @@ def get_header():
 
 def get_cep(state, city, adress):
     response = None
-    try:
-        headers = get_header()
-        logging.info('Enviando requisição para api ...')
-        response = requests.get(f'http://viacep.com.br/ws/{state}/{city}/{adress}/json',
-                                headers=headers)
+    auth = False
 
-        response.raise_for_status()
-        
-        logging.info('Requisição enviada com sucesso.')
-        logging.info(response.json())
+    try:
+        auth = get_secret_manager.auth()
+        if auth == True:
+            headers = get_header()
+            logging.info('Enviando requisição para api ...')
+            response = requests.get(f'http://viacep.com.br/ws/{state}/{city}/{adress}/json',
+                                    headers=headers)
+
+            response.raise_for_status()
+            
+            logging.info('Requisição enviada com sucesso.')
+            logging.info(response.json())
+        else:
+            logging.info('Usuário não autorizado a consultar cep.')
+            print('Usuário não autorizado a consultar cep.')
 
         return response
     except requests.exceptions.RequestException as e:

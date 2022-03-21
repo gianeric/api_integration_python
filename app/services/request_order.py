@@ -18,7 +18,7 @@ def save(payload):
         adress = ''
 
         cep = response_cep.get_cep(state=state, city=city, adress=adress)
-        print(cep.status_code)
+        print(cep)
 
         headers = get_header()
         logging.info('Enviando requisição para api ...')
