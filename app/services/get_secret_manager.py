@@ -25,4 +25,4 @@ def auth():
             return False
     except botocore.exceptions.ClientError as e:
         logging.info(f'Ocorreu um erro ao extrair informações do secret. {e}')
-        raise(f'Ocorreu um erro ao extrair informações do secret. {e}')
+        raise Exception(f'Ocorreu um erro ao extrair informações do secret. {e}')
