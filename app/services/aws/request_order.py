@@ -1,4 +1,4 @@
-from services import response_cep
+from services.aws import response_cep
 import requests
 import logging
 
