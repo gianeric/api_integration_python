@@ -1,4 +1,4 @@
-# API-Integration-java
+# API-Integration-python
 Project developed in python using requests
 #
 <p align="center">
