@@ -2,13 +2,23 @@ from models.aws.order import Order
 from models.aws.person import Person
 from models.aws.address import Address
 from models.aws.order_itens import OrderItens
-import logging
 
+class OrderGraphRepository:
+    def __init__(self, logger):
+        self.logger = logger
 
-class OrderGraph():
-    def __init__(self):
-        self.import_order()
-
+    def save_order_graph(self, payload):
+        self.logger.info("[order_graph_repository] Iniciando salvamento no banco grafo.")
+        try:
+            self.import_order()
+            self.import_person()
+            self.import_address()
+            self.import_order_itens()
+            self.logger.info("[order_graph_repository] Dados salvos com sucesso no banco grafo.")
+        except Exception as e:
+            self.logger.info("[order_graph_repository] Ocorreu um erro ao salvar dados no banco grafo.", error=str(e))
+            raise Exception(f'Ocorreu um erro ao salvar dados no banco grafo. {e}')
+    
     def import_order(self):
         order = Order()
         order.codigo_pedido = "Credito"
@@ -37,5 +47,3 @@ class OrderGraph():
         order_itens = OrderItens()
         order_itens.descricao = descricao
 
-    def save(payload):
-        logging.info('Salvando dados no banco grafo.')

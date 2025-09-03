@@ -1,59 +1,37 @@
 {
-    "codigoPedido": "1",
-    "dataPedido": "2022-03-05",
-    "nomePedido": "Ordem de Serviço 1",
-    "tipoPedido": "Ordem",
-    "dadosPessoa": [
+  "codigo_pedido": "1",
+  "data_pedido": "2022-03-05",
+  "nome_pedido": "Pedido 1",
+  "tipo_pedido": "PEDIDO",
+  "dados_pessoa": [
+    {
+      "nome": "The Rock",
+      "cpf_cnpj": "35338650029",
+      "data_nascimento": "2022-03-05",
+      "endereco": [
         {
-            "nome": "Nome 1",
-            "dataNascimento": "1993-10-21",
-            "endereco": [
-                {
-                    "descricao": "Casa",
-                    "lougradouro": "Avenida 1",
-                    "bairro": "centro",
-                    "cidade": "São Paulo",
-                    "cep": "11111000"
-                },
-                {
-                    "descricao": "Casa da mãe",
-                    "lougradouro": "Avenida 2",
-                    "bairro": "centro",
-                    "cidade": "São Paulo",
-                    "cep": "11111000"
-                }
-            ]
+          "descricao": "Casa",
+          "lougradouro": "Avenida 1",
+          "bairro": "Centro",
+          "cidade": "São Paulo",
+          "cep": "11111-000"
         },
         {
-            "nome": "Nome 2",
-            "dataNascimento": "1993-12-15",
-            "endereco": [
-                {
-                    "descricao": "Casa",
-                    "lougradouro": "Avenida 1",
-                    "bairro": "centro",
-                    "cidade": "São Paulo",
-                    "cep": "11111000"
-                },
-                {
-                    "descricao": "Casa da mãe",
-                    "lougradouro": "Avenida 2",
-                    "bairro": "centro",
-                    "cidade": "São Paulo",
-                    "cep": "11111000"
-                }
-            ]
+          "descricao": "Trabalho",
+          "lougradouro": "Avenida 2",
+          "bairro": "Jardim Frederico",
+          "cidade": "São Paulo",
+          "cep": "11111-000"
         }
-    ],
-    "itensPedido": [
-        {
-            "descricao": "Instalação do motor de arranque"
-        },
-        {
-            "descricao": "Instalação do amortecedor"
-        },
-        {
-            "descricao": "Troca da bomba de gasolina"
-        }
-    ]
+      ]
+    }
+  ],
+  "itens_pedido": [
+    {
+      "descricao": "Lanterna Honda"
+    },
+    {
+      "descricao": "Farol Honda"
+    }
+  ]
 }
