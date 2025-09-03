@@ -1,7 +1,7 @@
 from configs.logger import get_logger
-from services.aws.order_api_client import OrderApiClient
-from services.aws.order_sqs_publisher import OrderSqsPublisher
-from services.aws.order_graph_repository import OrderGraphRepository
+from services.order_api_client import OrderApiClient
+from services.order_sqs_publisher import OrderSqsPublisher
+from services.order_graph_repository import OrderGraphRepository
 from utils import payload_loader
 
 def main():

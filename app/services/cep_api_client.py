@@ -1,4 +1,4 @@
-from services.aws.secrets_authenticator import SecretsAuthenticator
+from services.secrets_authenticator import SecretsAuthenticator
 import requests
 
 class CepApiClient:

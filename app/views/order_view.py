@@ -1,4 +1,4 @@
-from app.services.aws.order_graph_repository import OrderGraph
+from app.services.order_graph_repository import OrderGraph
 
 
 def save_order_graph(payload):
